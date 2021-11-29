@@ -1,12 +1,18 @@
 import { Controller, Get } from '@nestjs/common';
 import { AppService } from './app.service';
+import { Transaction } from './transaction';
 
-@Controller()
+@Controller('v1')
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get()
-  getHello(): string {
-    return this.appService.getHello();
+  @Get('transactions')
+  getTransactions(): Transaction[] {
+    return this.appService.getTransactions();
+  }
+
+  @Get('balances')
+  getBalanceByUser(): Transaction[] {
+    return this.appService.getBalanceByUser();
   }
 }

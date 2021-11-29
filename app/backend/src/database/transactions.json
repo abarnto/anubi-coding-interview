@@ -1,0 +1,110 @@
+[
+  {
+    "id": "0x-trx-1",
+    "nature": {
+      "code": "DEPOSIT"
+    },
+    "createdOn": "2021-10-19T23:00:00.000Z",
+    "amount": 0.01,
+    "asset": "ETH",
+    "user": {
+      "id": "u1"
+    }
+  },
+  {
+    "id": "0x-trx-2",
+    "nature": {
+      "code": "DEPOSIT"
+    },
+    "createdOn": "2021-11-19T23:00:00.000Z",
+    "amount": 0.04,
+    "asset": "ETH",
+    "user": {
+      "id": "u1"
+    }
+  },
+  {
+    "id": "0x-trx-3",
+    "nature": {
+      "code": "DEPOSIT"
+    },
+    "createdOn": "2021-11-12T10:00:00.000Z",
+    "amount": 0.007,
+    "asset": "ETH",
+    "user": {
+      "id": "u1"
+    }
+  },
+  {
+    "id": "0x-trx-4",
+    "nature": {
+      "code": "DEPOSIT"
+    },
+    "createdOn": "2021-11-18T16:00:00.000Z",
+    "amount": 0.1,
+    "asset": "BTC",
+    "user": {
+      "id": "u1"
+    }
+  },
+  {
+    "id": "0x-trx-5",
+    "nature": {
+      "code": "REWARDS"
+    },
+    "createdOn": "2021-11-22T22:00:00.000Z",
+    "amount": 0.003,
+    "asset": "ETH",
+    "user": {
+      "id": "u2"
+    }
+  },
+  {
+    "id": "0x-trx-6",
+    "nature": {
+      "code": "REWARDS"
+    },
+    "createdOn": "2021-11-28T22:00:00.000Z",
+    "amount": 0.1,
+    "asset": "BTC",
+    "user": {
+      "id": "u1"
+    }
+  },
+  {
+    "id": "0x-trx-7",
+    "nature": {
+      "code": "DEPOSIT"
+    },
+    "createdOn": "2021-11-19T21:00:00.000Z",
+    "amount": 0.008,
+    "asset": "ETH",
+    "user": {
+      "id": "u2"
+    }
+  },
+  {
+    "id": "0x-trx-8",
+    "nature": {
+      "code": "DEPOSIT"
+    },
+    "createdOn": "2021-12-01T21:00:00.000Z",
+    "amount": 12.4,
+    "asset": "DOT",
+    "user": {
+      "id": "u2"
+    }
+  },
+  {
+    "id": "0x-trx-9",
+    "nature": {
+      "code": "INTEREST"
+    },
+    "createdOn": "2021-12-04T21:00:00.000Z",
+    "amount": 16.2,
+    "asset": "DOT",
+    "user": {
+      "id": "u2"
+    }
+  }
+]
