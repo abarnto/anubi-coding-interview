@@ -53,12 +53,15 @@ _Backend_
 
 1. Paginate the `GET:transactions` endpoint to return `5 elements` per page **(hint: use the date as index)**
 2. Implement the `GET:balances` endpoint so to have the current balance for each user and asset
+3. Implement the `processUserInterests` method inside the class AppService
+4. Setup a GraphQL endpoint and add a mutation that given a user id, an asset id and a date it will invoke `processUserInterests` method
 
 _Frontend_ (Small Admin Dashboard)
 
 1. Organize the fetching function in an [Hook](https://reactjs.org/docs/hooks-custom.html)
 2. Add paging to the table, letting the admin switch between page 1 and page 2
 3. Show customers' balance in the `/balance` route, creating cards components for each user-asset pair, and it's balance sum
+4. Configure an Apollo client in order to fetch the data from the GraphQL endpoint created in Backend Step4 and create a form that will invoke the user interests process routine inside a new route named `/interests`
 
 ### Evaluation Criteria
 

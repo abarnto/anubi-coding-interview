@@ -8,7 +8,7 @@ export enum TransactionNature {
 export interface Transaction {
   id: string
   nature: {
-    code: string
+    code: TransactionNature
   }
   amount: number
   asset: string

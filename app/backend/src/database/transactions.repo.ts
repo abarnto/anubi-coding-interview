@@ -8,7 +8,7 @@ import { Transaction } from "./transactions.types"
  */
 @Injectable()
 export class TransactionsRepo {
-  private readonly transactions: Transaction[] = MOCKED_TRANSACTIONS
+  private readonly transactions = MOCKED_TRANSACTIONS as Transaction[]
 
   getAll = () => this.transactions
 
