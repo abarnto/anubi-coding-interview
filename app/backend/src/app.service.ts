@@ -1,11 +1,13 @@
-import { Injectable, NotImplementedException } from '@nestjs/common';
-import * as MOCKED_TRANSACTIONS from './database/transactions.json';
-import { Transaction } from './transaction';
+import { Injectable, NotImplementedException } from "@nestjs/common"
+import { TransactionsRepo } from "./database/transactions.repo"
+import { Transaction } from "./database/transactions.types"
 
 @Injectable()
 export class AppService {
+  constructor(private readonly transactionsRepo: TransactionsRepo) {}
+
   getTransactions(): Transaction[] {
-    return MOCKED_TRANSACTIONS;
+    return this.transactionsRepo.getAll()
   }
 
   /**
@@ -16,6 +18,6 @@ export class AppService {
    */
   getBalanceByUser(): any {
     // TODO: applicant should implement this method
-    throw new NotImplementedException();
+    throw new NotImplementedException()
   }
 }

@@ -1,0 +1,21 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "tsconfig.build.json": true,
+    "**/node_modules": true
+  },
+  "files.trimTrailingWhitespace": true,
+  "tslint.autoFixOnSave": true,
+  "editor.formatOnSave": true,
+  "prettier.singleQuote": false,
+  "prettier.printWidth": 180,
+  "typescript.preferences.quoteStyle": "double",
+  "javascript.preferences.quoteStyle": "double",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "css.validate": false,
+  "cSpell.words": ["nestjs"]
+}
