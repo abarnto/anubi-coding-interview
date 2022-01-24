@@ -1,4 +1,4 @@
-<p align="center">
+<p align="center" style="background: #292a2c; text-aling:center; padding-top:8px;">
   <a href="http://anubidigital.com/" target="blank"><img src="https://anubi-public-assets.s3.eu-central-1.amazonaws.com/ANUBI-LOGO-19-aprile-bianco.png" width="320" alt="Nest Logo" /></a>
 </p>
 
@@ -84,7 +84,7 @@ We strongly believe in peer help to solve tough problems. Because we evaluate on
 The project deadline is set to
 
 ```
-2021-12-19T23:00:00.000Z
+2022-01-31T23:00:00.000Z
 ```
 
 ### Submission
