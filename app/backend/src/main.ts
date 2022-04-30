@@ -9,6 +9,9 @@ async function bootstrap() {
     .setDescription("Anubi Digital API")
     .setVersion("1.0")
     .build()
+
+  app.enableCors()
+
   const document = SwaggerModule.createDocument(app, config)
   SwaggerModule.setup("api", app, document)
 
