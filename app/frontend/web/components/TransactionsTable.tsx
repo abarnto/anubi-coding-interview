@@ -2,6 +2,7 @@ import { Transaction } from "../types";
 import MockedUserIcon from "./MockedUserIcon";
 import TransactionNatureIcon from "./TransactionNatureIcon";
 import AssetLabel from "./AssetLabel";
+import DateTimeLabel from "./DateTimeLabel";
 
 import classes from "../styles/TransactionTable.module.css";
 
@@ -30,7 +31,9 @@ const TransactionsTable: React.ElementType = ({ data }: { data: Transaction[] })
               <AssetLabel>{t.asset}</AssetLabel>
             </td>
             <td className={classes.amount}>{t.amount}</td>
-            <td className={classes.createdOn}>{t.createdOn}</td>
+            <td className={classes.createdOn}>
+              <DateTimeLabel>{t.createdOn}</DateTimeLabel>
+            </td>
             <td>
               <MockedUserIcon {...t.user} />
             </td>
