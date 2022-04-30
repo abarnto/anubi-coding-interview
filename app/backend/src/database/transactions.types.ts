@@ -15,4 +15,5 @@ export interface Transaction {
   user: {
     id: string
   }
+  createdOn: string
 }

@@ -12,8 +12,17 @@ const INTEREST_RATES_BY_ASSET = {
 export class AppService {
   constructor(private readonly transactionsRepo: TransactionsRepo) {}
 
-  getTransactions(): Transaction[] {
-    return this.transactionsRepo.getAll()
+  getTransactions(page: number = 1, pageSize: number = 5): Transaction[] {
+    const allTransactions = this.transactionsRepo.getAll().sort((a, b) => {
+      const aDate = new Date(a.createdOn)
+      const bDate = new Date(b.createdOn)
+
+      return aDate >= bDate ? 1 : -1
+    })
+
+    const offset = (page - 1) * pageSize // 'page - 1' because it's index based
+
+    return allTransactions.slice(offset, offset + pageSize)
   }
 
   /**
