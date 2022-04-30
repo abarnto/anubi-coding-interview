@@ -1,0 +1,24 @@
+.nature {
+  text-align: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.nature div {
+  font-weight: bold;
+}
+
+.asset {
+  font-size: 1.3em;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+.amount {
+  font-size: x-large;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.createdOn {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: "dark";
+}
