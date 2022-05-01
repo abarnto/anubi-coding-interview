@@ -25,7 +25,7 @@ const Balance: NextPage = () => {
   );
 
   return (
-    <div className="flex flex-col">
+    <>
       <Head>
         <title>Balances</title>
         <link rel="icon" href="/favicon.jpg" />
@@ -52,7 +52,7 @@ const Balance: NextPage = () => {
           </div>
         </div>
       ))}
-    </div>
+    </>
   );
 };
 
