@@ -15,8 +15,8 @@ const TransactionsTable: React.ElementType = ({
     <div className="inline-block rounded-lg border shadow-2xl w-5/6">
       <table className="text-center table-auto w-full text-sm">
         <thead>
-          <tr className="border-b text-2xl text-slate-400">
-            <th>Nature</th>
+          <tr className="border-b text-2xl text-slate-500">
+            <th style={{ paddingLeft: "4em" }}>Nature</th>
             <th>Asset</th>
             <th>Amount</th>
             <th>Created On</th>
@@ -29,7 +29,6 @@ const TransactionsTable: React.ElementType = ({
               <td>
                 <div className={classes.nature}>
                   <TransactionNatureIcon {...t.nature} />
-                  <div>{t.nature.code}</div>
                 </div>
               </td>
               <td className={classes.asset}>

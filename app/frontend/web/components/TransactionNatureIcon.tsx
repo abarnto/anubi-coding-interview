@@ -1,9 +1,12 @@
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { TransactionNature } from "../types";
 import Image from "next/image";
 import { TransactionNatureCode } from "../enums";
 
+import classes from "../styles/TransactionNatureIcon.module.css";
+
 const TransactionNatureIcon = (props: TransactionNature) => {
+  const [tooltipShown, setTooltipShown] = useState(false);
   const source = useMemo(() => {
     const { code } = props;
     switch (code) {
@@ -19,7 +22,24 @@ const TransactionNatureIcon = (props: TransactionNature) => {
     }
   }, [props]);
 
-  return <Image width={64} height={64} src={source} alt="transaction_nature" />;
+  return (
+    <div className="flex items-center justify-center">
+      <span
+        style={{ visibility: tooltipShown ? "visible" : "hidden" }}
+        className={classes.tooltip}
+      >
+        {props.code}
+      </span>
+      <Image
+        width={64}
+        height={64}
+        src={source}
+        alt="transaction_nature"
+        onMouseOver={() => setTooltipShown(true)}
+        onMouseOut={() => setTooltipShown(false)}
+      />
+    </div>
+  );
 };
 
 export default TransactionNatureIcon;

@@ -24,8 +24,8 @@ const MockedUserIcon = ({
 
   return (
     <Image
-      width={48}
-      height={48}
+      width={64}
+      height={64}
       src={source}
       alt="transaction_nature"
       {...props}
