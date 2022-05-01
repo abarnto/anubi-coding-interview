@@ -6,7 +6,11 @@ import DateTimeLabel from "./DateTimeLabel";
 
 import classes from "../styles/TransactionTable.module.css";
 
-const TransactionsTable: React.ElementType = ({ data }: { data: Transaction[] }) => {
+const TransactionsTable: React.ElementType = ({
+  data,
+}: {
+  data: Transaction[];
+}) => {
   return (
     <div className="flex w-5/6 justify-center">
       <table className="text-center table-auto border-2 rounded-xl w-4/6 text-sm">
@@ -36,7 +40,7 @@ const TransactionsTable: React.ElementType = ({ data }: { data: Transaction[] })
                 <DateTimeLabel>{t.createdOn}</DateTimeLabel>
               </td>
               <td>
-                <MockedUserIcon {...t.user} />
+                <MockedUserIcon data={t.user} />
               </td>
             </tr>
           ))}
