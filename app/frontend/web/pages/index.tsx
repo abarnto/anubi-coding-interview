@@ -1,28 +1,17 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import { useCallback, useEffect, useState } from "react";
 
 import TransactionsTable from "../components/TransactionsTable";
 import BasicPaginator from "../components/BasicPaginator";
 
+import useTransactions from "../hooks/useTransactions";
+
 import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
-  const [transactions, setTransactions] = useState([]);
-  const [page, setPage] = useState(1);
-  const [pageSize, setPageSize] = useState(10);
+  const { transactions, setPage, setPageSize } = useTransactions();
 
-  const getTransactions = useCallback(() => {
-    fetch(
-      `http://localhost:3081/v1/transactions?page=${page}&pageSize=${pageSize}`
-    )
-      .then((res) => res.json())
-      .then(setTransactions)
-      .catch(console.error);
-  }, [page, pageSize]);
-
-  useEffect(getTransactions, [getTransactions]);
   return (
     <div className={styles.container}>
       <Head>
