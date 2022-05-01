@@ -1,6 +1,6 @@
 import { Injectable, NotImplementedException } from "@nestjs/common"
 import { TransactionsRepo } from "./database/transactions.repo"
-import { Transaction } from "./database/transactions.types"
+import { Transaction, Balance } from "./database/transactions.types"
 
 const INTEREST_RATES_BY_ASSET = {
   BTC: 5,
@@ -26,14 +26,20 @@ export class AppService {
   }
 
   /**
-   * @dev This method is used to get the total balance (sum of amounts)
-   *  grouped by user id, and asset
+   * It calculates the total balance (sum of amounts) grouped by user id, and asset
    *
-   * @returns
+   * @returns The balance releated to all transactions registered
    */
-  getBalanceByUser(): any {
-    // TODO: applicant should implement this method
-    throw new NotImplementedException()
+  getBalanceByUser(): Balance {
+    return this.transactionsRepo
+      .getAll()
+      .reduce((acc: Balance, curr: Transaction) => {
+        const { user, asset, amount } = curr
+        acc[user.id] = acc[user.id] || {} // adding user if not processed yet or using the existing one
+        acc[user.id][asset] = acc[user.id][asset] + amount || 0 // adding the amount to existing asset or adding the asset if not processed yet, setting the amount to 0
+
+        return acc
+      }, {})
   }
 
   /**
