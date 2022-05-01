@@ -1,6 +1,6 @@
 import { Controller, Get, Query } from "@nestjs/common"
 import { AppService } from "./app.service"
-import { Transaction } from "./database/transactions.types"
+import { Transaction, Balance } from "./database/transactions.types"
 
 @Controller("v1")
 export class AppController {
@@ -15,7 +15,7 @@ export class AppController {
   }
 
   @Get("balances")
-  getBalanceByUser(): Transaction[] {
+  getBalanceByUser(): Balance {
     return this.appService.getBalanceByUser()
   }
 }
