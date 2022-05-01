@@ -12,10 +12,10 @@ const TransactionsTable: React.ElementType = ({
   data: Transaction[];
 }) => {
   return (
-    <div className="flex w-5/6 justify-center">
-      <table className="text-center table-auto border-2 rounded-xl w-4/6 text-sm">
+    <div className="inline-block rounded-lg border shadow-2xl w-5/6">
+      <table className="text-center table-auto w-full text-sm">
         <thead>
-          <tr className="border-b font-medium text-slate-400">
+          <tr className="border-b text-2xl text-slate-400">
             <th>Nature</th>
             <th>Asset</th>
             <th>Amount</th>
@@ -25,7 +25,7 @@ const TransactionsTable: React.ElementType = ({
         </thead>
         <tbody>
           {data?.map((t) => (
-            <tr key={t.id} className="bg-white dark:bg-slate-800">
+            <tr key={t.id}>
               <td>
                 <div className={classes.nature}>
                   <TransactionNatureIcon {...t.nature} />

@@ -23,7 +23,6 @@ const Home: NextPage = () => {
   }, [page, pageSize]);
 
   useEffect(getTransactions, [getTransactions]);
-
   return (
     <div className={styles.container}>
       <Head>
@@ -32,8 +31,11 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <p>{"Antonio Barile's coding interview for "}</p>
-        <Image src={"/logo.png"} width={120} height={32} />
+        <div className="text-right">
+          <p>{"Antonio Barile's coding interview for "}</p>
+          <Image src={"/logo.png"} width={120} height={32} />
+        </div>
+        <h1 className="text-5xl self-center my-8">Transactions</h1>
 
         <TransactionsTable data={transactions} />
         <BasicPaginator
@@ -52,15 +54,14 @@ const Home: NextPage = () => {
           <span className={styles.logo}>
             <Image
               src="/logo.png"
-              alt="Vercel Logo"
+              alt="AnubiDigital Logo"
               width={120}
               height={32}
             />
           </span>
         </a>
-        <a href="https://icons8.com/icon/Ie7jWIuVvh9E/withdraw">
-          Icon by Icons8
-        </a>
+
+        <a href="https://icons8.com">Icons by Icons8</a>
       </footer>
     </div>
   );

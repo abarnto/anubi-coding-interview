@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import classes from "../styles/BasicPaginator.module.css";
 
 const BasicPaginator: React.ElementType = ({
   onPageChange,
@@ -24,11 +25,12 @@ const BasicPaginator: React.ElementType = ({
   };
 
   return (
-    <div className="flex justify-around w-4/6">
+    <div className="flex justify-around w-4/6 mt-4">
       <div className="flex flex-col">
-        Page
+        <div className={classes.label}>Page</div>
         <select
           onChange={(event) => onPageChange(event.target.value)}
+          className={classes.select}
         >
           {availablePages?.map((p) => (
             <option key={p} value={p}>
@@ -38,8 +40,12 @@ const BasicPaginator: React.ElementType = ({
         </select>
       </div>
       <div className="flex flex-col">
-        Page Size
-        <select onChange={handlePageSizeChange} defaultValue={10}>
+        <div className={classes.label}>Page Size</div>
+        <select
+          onChange={handlePageSizeChange}
+          defaultValue={10}
+          className={classes.select}
+        >
           {availablePageSizes.map((ps) => (
             <option key={ps} value={ps}>
               {ps}
