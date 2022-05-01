@@ -11,7 +11,7 @@ export class AppController {
     @Query("page") page,
     @Query("pageSize") pageSize
   ): Transaction[] {
-    return this.appService.getTransactions(page, pageSize)
+    return this.appService.getTransactions(+page, +pageSize)
   }
 
   @Get("balances")
