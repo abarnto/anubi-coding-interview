@@ -1,0 +1,20 @@
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  width: 10em;
+  border-width: 1px;
+  margin-left: 4em;
+  margin-top: 1em;
+  padding: 1em;
+}
+
+.card div:nth-child(1) {
+  font-size: 1.8em;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.card div:nth-child(2) {
+  font-size: x-large;
+  font-family: "Courier New", Courier, monospace;
+}

@@ -7,6 +7,7 @@ const MockedUserIcon = ({
   ...props
 }: {
   data: User;
+  [field: string]: any;
 }) => {
   const source = useMemo(() => {
     const { id } = data;

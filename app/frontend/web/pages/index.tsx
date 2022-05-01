@@ -27,12 +27,12 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Anubi Digital Coding Interview</title>
+        <title>Transactions</title>
         <link rel="icon" href="/favicon.jpg" />
       </Head>
 
       <main className={styles.main}>
-        <p>{"Antonio Barile coding interview for "}</p>
+        <p>{"Antonio Barile's coding interview for "}</p>
         <Image src={"/logo.png"} width={120} height={32} />
 
         <TransactionsTable data={transactions} />
